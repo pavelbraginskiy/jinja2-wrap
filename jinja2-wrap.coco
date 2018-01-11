@@ -1,0 +1,9 @@
+__import__('jinja2').Template(
+	(__import__('sys').argv[1] |> open$(?, 'r')).read()
+).render(
+	**{
+		i[0]: i[1] |> eval for i in [
+			n.split('=', 1) for n in __import__('sys').argv[2:]
+		]
+	}
+) |> print$(?, end='')
