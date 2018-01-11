@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 print(
 	__import__('jinja2').Template(
 		(open(__import__('sys').argv[1], 'r')).read()
